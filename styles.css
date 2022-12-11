@@ -3,6 +3,8 @@
 }
 *:root {
   --size: 250px;
+  --sizeMed: 500px;
+  --sizeLg: 700px;
 }
 
 body {
@@ -24,8 +26,8 @@ body {
 }
 h1 {
   position: absolute;
-  top: 10%;
-  left: 20%;
+  top: 30%;
+  left: 40%;
   animation: show 3s ease-in;
 }
 
@@ -35,86 +37,90 @@ img {
   z-index: 2;
 }
 
-.yellow1 {
+.yellowBL {
   position: absolute;
-  top: 101px;
-  left: -22px;
+  left: -10%;
+  bottom: 0;
   animation: grow 1s ease-in;
 }
-.yellow2 {
+.yellowTR {
   position: absolute;
-  top: -26px;
-  right: -4px;
+  top: -18%;
+  right: -2%;
 }
-.yellow3 {
+.yellowBR1 {
   position: absolute;
-  top: 82px;
-  right: -24px;
+  bottom: 10%;
+  right: -10%;
   animation: grow 2s ease-in;
 }
-.yellow4 {
+.yellowBR2 {
   position: absolute;
-  top: 112px;
-  right: 24px;
+  bottom: -10%;
+  right: 10%;
+
   animation: grow 3s ease-in;
 }
-.yellow5 {
+.yellowTL {
   position: absolute;
-  top: 2px;
-  left: 6px;
+  top: -9%;
+  left: 7%;
+  transform: rotate(60deg);
 }
-.dark1 {
+.darkTL {
   position: absolute;
-  top: 10px;
-  left: -25px;
-}
-.dark2 {
-  position: absolute;
-  top: 115px;
-  right: -10px;
+  top: 5%;
+  left: -10%;
   animation: grow 1s ease-in;
 }
-.dark3 {
+.darkBR {
   position: absolute;
-  top: 8px;
-  right: -25px;
+  bottom: -16%;
+  right: -5%;
   animation: grow 1s ease-in;
 }
-.light1 {
+.darkTR {
   position: absolute;
-  top: -30px;
-  left: -20px;
+  top: 3%;
+  right: -10%;
+
+  animation: grow 1s ease-in;
+}
+.lightTL {
+  position: absolute;
+  top: -20%;
+  left: -8%;
   animation: grow 2s ease-in;
 }
-.light2 {
+.lightBL {
   position: absolute;
-  top: 114px;
-  left: 8px;
+  bottom: -15%;
+  left: 1%;
   z-index: 1;
 }
 
-.branch1 {
+.branchTL {
   position: absolute;
-  top: -25px;
-  left: -50px;
+  top: -22%;
+  left: -20%;
   z-index: 1;
 
   transform: scaleX(-1);
   animation: show 3s ease-in;
 }
-.branch2 {
+.branchTR {
   position: absolute;
-  top: -54px;
-  right: 11px;
+  top: -30%;
+  right: 1%;
   z-index: 1;
   transform: rotateZ(303deg);
   -webkit-box-reflect: below;
   animation: show 3s ease-in;
 }
-.branch3 {
+.branchBL {
   position: absolute;
-  top: 100px;
-  left: 25px;
+  bottom: 0;
+  left: 9%;
   z-index: 0;
   -webkit-box-reflect: below;
   transform: rotateZ(30deg);
@@ -135,5 +141,34 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #myCanvas {
+    width: var(--sizeMed);
+    height: calc(var(--sizeMed) * 0.55);
+  }
+
+  img {
+    height: calc(var(--sizeMed) * 0.2);
+    width: calc(var(--sizeMed) * 0.2);
+  }
+}
+@media only screen and (min-width: 900px) {
+  #myCanvas {
+    width: var(--sizeLg);
+    height: calc(var(--sizeLg) * 0.55);
+  }
+
+  img {
+    height: calc(var(--sizeLg) * 0.2);
+    width: calc(var(--sizeLg) * 0.2);
+  }
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    top: 10%;
+    left: 20%;
   }
 }
