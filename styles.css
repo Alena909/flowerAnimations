@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+*:root {
+  --size: 250px;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myCanvas {
+  width: var(--size);
+  height: calc(var(--size) * 0.55);
+  border: 1px solid black;
+  z-index: 3;
+  position: relative;
+}
+h1 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  animation: show 3s ease-in;
+}
+
+img {
+  height: calc(var(--size) * 0.2);
+  width: calc(var(--size) * 0.2);
+  z-index: 2;
+}
+
+.yellow1 {
+  position: absolute;
+  top: 101px;
+  left: -22px;
+  animation: grow 1s ease-in;
+}
+.yellow2 {
+  position: absolute;
+  top: -26px;
+  right: -4px;
+}
+.yellow3 {
+  position: absolute;
+  top: 82px;
+  right: -24px;
+  animation: grow 2s ease-in;
+}
+.yellow4 {
+  position: absolute;
+  top: 112px;
+  right: 24px;
+  animation: grow 3s ease-in;
+}
+.yellow5 {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+.dark1 {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+}
+.dark2 {
+  position: absolute;
+  top: 115px;
+  right: -10px;
+  animation: grow 1s ease-in;
+}
+.dark3 {
+  position: absolute;
+  top: 8px;
+  right: -25px;
+  animation: grow 1s ease-in;
+}
+.light1 {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  animation: grow 2s ease-in;
+}
+.light2 {
+  position: absolute;
+  top: 114px;
+  left: 8px;
+  z-index: 1;
+}
+
+.branch1 {
+  position: absolute;
+  top: -25px;
+  left: -50px;
+  z-index: 1;
+
+  transform: scaleX(-1);
+  animation: show 3s ease-in;
+}
+.branch2 {
+  position: absolute;
+  top: -54px;
+  right: 11px;
+  z-index: 1;
+  transform: rotateZ(303deg);
+  -webkit-box-reflect: below;
+  animation: show 3s ease-in;
+}
+.branch3 {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  z-index: 0;
+  -webkit-box-reflect: below;
+  transform: rotateZ(30deg);
+  animation: show 3s ease-in;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
